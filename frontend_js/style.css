@@ -1,0 +1,10 @@
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+select {
+   max-width: 300px;
+   
+}
