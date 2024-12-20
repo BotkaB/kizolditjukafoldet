@@ -6,9 +6,11 @@ import useAdatContext from "../contexts/AdatContext";
 export default function Publikus() {
     /*  A bejegyzesLista az AdatContext-en keresztül jön a szerverről, asszinkron módon */
     const { bejegyzesLista } = useAdatContext();
+
+    console.log(bejegyzesLista)
     return (
         <>
-            <table class="table table-hover table-bordered table-striped">
+            <table className="table table-hover table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>id</th>
@@ -18,8 +20,8 @@ export default function Publikus() {
                     </tr>
                 </thead>
                 <tbody>
-                    {bejegyzesLista.map((element, index) => {
-                        return <Sor adat={element} key={index} />;
+                    {bejegyzesLista.map((element) => {
+                        return <Sor adat={element} key={element.id} />;
                     })}
                 </tbody>
             </table>

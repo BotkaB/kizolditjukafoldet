@@ -5,7 +5,7 @@ export default function Sor({ adat }) {
         <tr>
             <td>{adat.id}</td>
             <td>{adat.tevekenyseg.tevekenyseg_nev}</td>
-            <td>{adat.id}</td>
+            <td>{adat.osztaly_id}</td>
             {adat.allapot === 0 ? <td>nincs elfogadva</td> : <td>elfogadva</td>}
          
         </tr>

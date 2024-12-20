@@ -25,6 +25,8 @@ export default function Urlap() {
         if (!(osztaly === "valassz" || tevekenyseg === "valassz")) {
             /* meghívjuk az AdatContex postAdat metódusát */
             postAdat(adat, "api/bejegyzes", setBejegyzesLista);
+            setOsztaly("valassz");
+            setTevekenyseg("valassz")
         } else {
             console.log("hibás adatok");
         }
@@ -34,7 +36,7 @@ export default function Urlap() {
      
         <form className="my-3" onSubmit={kuld}>
             {/* osztály legördülő űrlapelem */}
-            <select
+            <select value={osztaly}
                 className="form-select"
                 id="osztaly"
                 name="osztaly"
@@ -54,7 +56,7 @@ export default function Urlap() {
                 })}
             </select>
             {/* tevékenység legördülő űrlapelem */}
-            <select
+            <select value={tevekenyseg}
                 className="form-select"
                 id="tevekenyseg"
                 name="tevekenyseg"
